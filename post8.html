@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 8 – Functions in Python (Part 2)</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">s
+</head>
+<body>
+
+      <!-- Header -->
+  <header>
+    <h1>Day 10 – Strings in Python (Advanced Concepts)</h1>
+    <nav>
+      <a href="index.html" class="read-more">← Back to Home</a>
+    </nav>
+  </header>
+<article>
+  <div class="container">
+    <h1>📅 Day 8 – Functions in Python (Part 2)</h1>
+
+    <p>Today we go deeper into Python functions – mastering arguments, return values, lambda, recursion, and scope. Let’s dive 🚀</p>
+
+    <hr>
+
+    <h2>1. Function Parameters & Arguments</h2>
+
+    <h3>1.1 Types of Arguments</h3>
+
+    <h4>1. Positional Arguments</h4>
+    <pre><code class="language-python">
+def greet(name, age):
+    print(f"Hello {name}, you are {age} years old.")
+
+greet("Rahul", 21)   # Order matters
+greet(21, "Rahul")   # Wrong order
+    </code></pre>
+
+    <h4>2. Keyword Arguments</h4>
+    <pre><code class="language-python">
+def greet(name, age):
+    print(f"Hello {name}, you are {age} years old.")
+
+greet(age=21, name="Rahul")  # Order doesn’t matter
+    </code></pre>
+
+    <h4>3. Default Arguments</h4>
+    <pre><code class="language-python">
+def greet(name, age=18):
+    print(f"Hello {name}, you are {age} years old.")
+
+greet("Rahul")        # Uses default age=18
+greet("Ramesh", 25)   # Overrides default
+    </code></pre>
+
+    <h4>4. Variable-length Arguments (*args)</h4>
+    <pre><code class="language-python">
+def add_numbers(*args):
+    total = sum(args)
+    print("Sum:", total)
+
+add_numbers(10, 20, 30, 40)   # Sum: 100
+    </code></pre>
+
+    <h4>5. Variable-length Keyword Arguments (**kwargs)</h4>
+    <pre><code class="language-python">
+def display_info(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+
+display_info(name="Rahul", age=21, city="Delhi")
+# name: Rahul
+# age: 21
+# city: Delhi
+    </code></pre>
+
+    <h2>2. Returning Multiple Values</h2>
+    <pre><code class="language-python">
+def calculate(a, b):
+    sum_val = a + b
+    diff_val = a - b
+    return sum_val, diff_val
+
+s, d = calculate(10, 5)
+print("Sum:", s)
+print("Difference:", d)
+    </code></pre>
+
+    <h2>3. Nested Functions</h2>
+    <pre><code class="language-python">
+def outer():
+    print("This is the outer function.")
+
+    def inner():
+        print("This is the inner function.")
+
+    inner()
+
+outer()
+    </code></pre>
+
+    <h2>4. Lambda Functions</h2>
+    <p>Lambda = small, one-line anonymous function.</p>
+    <pre><code class="language-python">
+square = lambda x: x * x
+print(square(5))   # 25
+
+add = lambda a, b: a + b
+print(add(10, 20)) # 30
+    </code></pre>
+
+    <h2>5. Map, Filter, Reduce with Lambda</h2>
+
+    <h4>map()</h4>
+    <pre><code class="language-python">
+numbers = [1, 2, 3, 4, 5]
+squares = list(map(lambda x: x**2, numbers))
+print(squares)  # [1, 4, 9, 16, 25]
+    </code></pre>
+
+    <h4>filter()</h4>
+    <pre><code class="language-python">
+numbers = [10, 15, 20, 25, 30]
+evens = list(filter(lambda x: x % 2 == 0, numbers))
+print(evens)  # [10, 20, 30]
+    </code></pre>
+
+    <h4>reduce()</h4>
+    <pre><code class="language-python">
+from functools import reduce
+
+numbers = [1, 2, 3, 4, 5]
+product = reduce(lambda x, y: x * y, numbers)
+print(product)  # 120
+    </code></pre>
+
+    <h2>6. Recursion in Functions</h2>
+    <pre><code class="language-python">
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+print(factorial(5))  # 120
+    </code></pre>
+    <p><b>⚠️ Note:</b> Always include a <b>base case</b> to avoid infinite recursion.</p>
+
+    <h2>7. Scope of Variables</h2>
+    <pre><code class="language-python">
+x = 10  # Global variable
+
+def func():
+    x = 5  # Local variable
+    print("Local x:", x)
+
+func()
+print("Global x:", x)
+    </code></pre>
+
+    <h2>8. Global Keyword</h2>
+    <pre><code class="language-python">
+count = 0
+
+def increment():
+    global count
+    count += 1
+    print("Count:", count)
+
+increment()
+increment()
+    </code></pre>
+
+    <h2>📝 Practice Exercises</h2>
+    <ul>
+      <li>Write a function that takes any number of arguments and returns their average.</li>
+      <li>Write a function using <code>**kwargs</code> that prints student details.</li>
+      <li>Write a <b>lambda function</b> to check if a number is prime.</li>
+      <li>Write a recursive function to generate Fibonacci sequence.</li>
+      <li>Use <code>map</code>, <code>filter</code>, <code>reduce</code> on a list of numbers.</li>
+    </ul>
+
+    <hr>
+    <p><b>✅ Day 8 Summary:</b></p>
+    <ul>
+      <li>Learned all types of function arguments.</li>
+      <li>Explored lambda, map, filter, reduce.</li>
+      <li>Understood recursion and variable scope.</li>
+      <li>Now you can write flexible, reusable, and professional Python functions.</li>
+    </ul>
+  </div>
+
+</article>
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Z0>A1 Blog</p>
+  </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+
+</body>
+</html>

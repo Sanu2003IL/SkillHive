@@ -13,11 +13,109 @@
     "tag": "Python Basics",
     "excerpt": "Understanding variables in Python and how to store data..."
   },
-  {
-    "title": "Day 3 - Tip: Use Virtual Environments",
+    {
+    "title": "Day 3 - Python Variables",
+    "file": "post3.html",
+    "date": "2025-08-22",
+    "tag": "Python Basics",
+    "excerpt": "Understanding variables in Python and how to store data..."
+  },
+       {
+    "title": "Day 4 - Python Variables",
+    "file": "post4.html",
+    "date": "2025-08-22",
+    "tag": "Python Basics",
+    "excerpt": "Understanding variables in Python and how to store data..."
+  },  
+   {
+    "title": "Day 5 - Python Variables",
+    "file": "post5.html",
+    "date": "2025-08-22",
+    "tag": "Python Basics",
+    "excerpt": "Understanding variables in Python and how to store data..."
+  },  
+   {
+    "title": "Day 6 - Python Variables",
+    "file": "post6.html",
+    "date": "2025-08-22",
+    "tag": "Python Basics",
+    "excerpt": "Understanding variables in Python and how to store data..."
+  },
+       {
+    "title": "Day 7 - Python Variables",
+    "file": "post7.html",
+    "date": "2025-08-22",
+    "tag": "Python Basics",
+    "excerpt": "Understanding variables in Python and how to store data..."
+  },
+       {
+    "title": "Day 8 - Python Variables",
+    "file": "post8.html",
+    "date": "2025-08-22",
+    "tag": "Python Basics",
+    "excerpt": "Understanding variables in Python and how to store data..."
+  },
+       {
+    "title": "Day 9 - Python Variables",
+    "file": "post9.html",
+    "date": "2025-08-22",
+    "tag": "Python Basics",
+    "excerpt": "Understanding variables in Python and how to store data..."
+  },
+       {
+    "title": "Day 10 - Python Variables",
+    "file": "post10.html",
+    "date": "2025-08-22",
+    "tag": "Python Basics",
+    "excerpt": "Understanding variables in Python and how to store data..."
+  },
+
+
+
+    {
+    "title": "Tip: Use Virtual Environments",
     "file": "post3.html",
     "date": "2025-08-23",
     "tag": "Tips",
+    "excerpt": "Learn why virtual environments are important in Python projects..."
+  },
+  {
+    "title": "Tip: Use Virtual Environments",
+    "file": "post3.html",
+    "date": "2025-08-23",
+    "tag": "Tips",
+    "excerpt": "Learn why virtual environments are important in Python projects..."
+  },
+  {
+    "title": "Tip: Use Virtual Environments",
+    "file": "post3.html",
+    "date": "2025-08-23",
+    "tag": "Tips",
+    "excerpt": "Learn why virtual environments are important in Python projects..."
+  },
+
+  
+
+
+    {
+    "title": "Top: Use Virtual Environments",
+    "file": "post3.html",
+    "date": "2025-08-23",
+    "tag": "Challenges",
+    "excerpt": "Learn why virtual environments are important in Python projects..."
+  },
+      {
+    "title": "Top: Use Virtual Environments",
+    "file": "post3.html",
+    "date": "2025-08-23",
+    "tag": "Challenges",
+    "excerpt": "Learn why virtual environments are important in Python projects..."
+  },
+      {
+    "title": "Top: Use Virtual Environments",
+    "file": "post3.html",
+    "date": "2025-08-23",
+    "tag": "Challenges",
     "excerpt": "Learn why virtual environments are important in Python projects..."
   }
 ]

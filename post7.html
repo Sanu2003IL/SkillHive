@@ -1,0 +1,214 @@
+Perfect 🚀 You’re building a **solid foundation** step by step.
+I’ve converted your **Day 6 – Lists in Python** into the same **beautiful blog post style** (like Day 1–5).
+
+Here’s your **post6.html** 👇
+
+---
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 6 – Lists in Python</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
+</head>
+<body>
+
+      <!-- Header -->
+  <header>
+    <h1>Day 10 – Strings in Python (Advanced Concepts)</h1>
+    <nav>
+      <a href="index.html" class="read-more">← Back to Home</a>
+    </nav>
+  </header>
+
+<article>
+  <div class="container">
+    <h1>📅 Day 6 – Lists in Python</h1>
+
+    <p>A <b>list</b> is a collection of <b>ordered</b>, <b>mutable</b> (changeable), and <b>heterogeneous</b> (can store different types) elements. Lists are written with <b>square brackets [ ]</b>.</p>
+
+    <hr>
+
+    <h2>1. Creating Lists</h2>
+    <pre><code class="language-python">
+# Empty list
+my_list = []
+
+# List of numbers
+nums = [1, 2, 3, 4, 5]
+
+# List of strings
+fruits = ["apple", "banana", "cherry"]
+
+# Mixed data types
+mixed = [1, "hello", 3.14, True]
+
+# Nested list
+nested = [[1, 2], [3, 4]]
+    </code></pre>
+
+    <h2>2. Accessing Elements</h2>
+    <pre><code class="language-python">
+fruits = ["apple", "banana", "cherry"]
+
+print(fruits[0])    # apple (first element)
+print(fruits[-1])   # cherry (last element)
+print(fruits[1:])   # ['banana', 'cherry']
+    </code></pre>
+
+    <h2>3. Modifying Lists</h2>
+    <pre><code class="language-python">
+fruits = ["apple", "banana", "cherry"]
+
+# Change element
+fruits[1] = "mango"
+print(fruits)   # ['apple', 'mango', 'cherry']
+
+# Add element
+fruits.append("orange")
+print(fruits)
+
+# Insert at index
+fruits.insert(1, "grape")
+print(fruits)
+
+# Remove element
+fruits.remove("mango")
+print(fruits)
+
+# Pop element (last by default)
+print(fruits.pop())   # removes last
+print(fruits)
+
+# Delete element by index
+del fruits[0]
+print(fruits)
+
+# Clear list
+fruits.clear()
+print(fruits)
+    </code></pre>
+
+    <h2>4. List Operations</h2>
+    <pre><code class="language-python">
+list1 = [1, 2, 3]
+list2 = [4, 5, 6]
+
+print(list1 + list2)   # Concatenation
+print(list1 * 2)       # Repetition
+print(2 in list1)      # Membership -> True
+print(10 not in list1) # True
+    </code></pre>
+
+    <h2>5. List Functions</h2>
+    <pre><code class="language-python">
+numbers = [10, 20, 30, 40, 50]
+
+print(len(numbers))    # 5
+print(max(numbers))    # 50
+print(min(numbers))    # 10
+print(sum(numbers))    # 150
+    </code></pre>
+
+    <h2>6. List Methods</h2>
+    <pre><code class="language-python">
+nums = [3, 1, 4, 1, 5, 9]
+
+nums.sort()
+print(nums)       # [1, 1, 3, 4, 5, 9]
+
+nums.reverse()
+print(nums)       # [9, 5, 4, 3, 1, 1]
+
+print(nums.count(1))  # 2
+print(nums.index(4))  # 2
+    </code></pre>
+
+    <h2>7. Iterating Over Lists</h2>
+    <pre><code class="language-python">
+fruits = ["apple", "banana", "cherry"]
+
+for fruit in fruits:
+    print(fruit)
+
+# With index
+for i in range(len(fruits)):
+    print(i, fruits[i])
+    </code></pre>
+
+    <h2>8. List Comprehension</h2>
+    <pre><code class="language-python">
+# Squares of numbers 1 to 5
+squares = [x**2 for x in range(1, 6)]
+print(squares)  # [1, 4, 9, 16, 25]
+
+# Even numbers
+evens = [x for x in range(10) if x % 2 == 0]
+print(evens)  # [0, 2, 4, 6, 8]
+    </code></pre>
+
+    <h2>9. Nested Lists (Matrix Example)</h2>
+    <pre><code class="language-python">
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+print(matrix[0][1])  # 2
+
+for row in matrix:
+    for col in row:
+        print(col, end=" ")
+    </code></pre>
+
+    <h2>10. Practice Tasks</h2>
+    <ul>
+      <li>Create a list of 5 numbers and find their <b>sum, max, and min</b>.</li>
+      <li>Write a program to remove all duplicates from a list.</li>
+      <li>Create a list of 10 numbers and print only the even numbers.</li>
+      <li>Reverse a list without using <code>reverse()</code>.</li>
+      <li>Make a matrix (nested list) and print the diagonal elements.</li>
+    </ul>
+
+    <hr>
+    <p><b>👉 Day 6 Summary</b></p>
+    <ul>
+      <li>Lists are ordered, mutable collections.</li>
+      <li>We can create, modify, and delete elements.</li>
+      <li>Learned functions, methods, and list comprehensions.</li>
+    </ul>
+  </div>
+</article>
+    <!-- Footer -->
+  <footer>
+    <p>© 2025 Z0>A1 Blog</p>
+  </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+
+</body>
+</html>
+```
+
+---
+
+Now you can:
+
+1. Save it as **post6.html** in your project folder.
+2. Update your `posts.json` with:
+
+```json
+{
+  "title": "Day 6 – Lists in Python",
+  "file": "post6.html",
+  "date": "2025-08-26",
+  "tag": "Python Basics",
+  "excerpt": "Learn Python lists, operations, methods, list comprehension, and more..."
+}
+```
+
+---
+
+Do you want me to also create **Day 7 – Tuples in Python** (with same style) so you’re ready for the next post?

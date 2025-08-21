@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 5 – Strings in Python</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
+</head>
+<body>
+
+      <!-- Header -->
+  <header>
+    <h1>Day 10 – Strings in Python (Advanced Concepts)</h1>
+    <nav>
+      <a href="index.html" class="read-more">← Back to Home</a>
+    </nav>
+  </header>
+<article>
+  <div class="container">
+    <a href="index.html" class="back-link">⬅ Back to Home</a>
+    <h1>📅 Day 5 – Strings in Python (Detailed Study)</h1>
+
+    <p>Strings are one of the most commonly used data types in Python. They are <b>sequences of characters</b> enclosed in <b>single quotes (‘ ’)</b>, <b>double quotes (“ ”)</b>, or <b>triple quotes (‘’’ or “””)</b>.</p>
+
+    <hr>
+
+    <h2>1. Creating Strings</h2>
+    <pre><code class="language-python">
+# single quotes
+s1 = 'Hello'
+
+# double quotes
+s2 = "World"
+
+# triple quotes (used for multi-line strings or docstrings)
+s3 = '''This is 
+a multi-line 
+string.'''
+
+print(s1)
+print(s2)
+print(s3)
+    </code></pre>
+    <p><b>Output:</b></p>
+    <pre><code>Hello
+World
+This is 
+a multi-line 
+string.</code></pre>
+
+    <hr>
+
+    <h2>2. String Indexing and Slicing</h2>
+    <p>Strings are <b>ordered sequences</b>, so we can access characters using indexes.</p>
+    <pre><code class="language-python">
+text = "Python"
+
+# Indexing
+print(text[0])   # First character -> P
+print(text[-1])  # Last character -> n
+
+# Slicing
+print(text[0:4])   # Pyth
+print(text[:3])    # Pyt
+print(text[2:])    # thon
+print(text[::-1])  # Reverse -> nohtyP
+    </code></pre>
+
+    <hr>
+
+    <h2>3. String Operations</h2>
+
+    <h3>🔹 Concatenation</h3>
+    <pre><code class="language-python">
+a = "Hello"
+b = "World"
+print(a + " " + b)  # Hello World
+    </code></pre>
+
+    <h3>🔹 Repetition</h3>
+    <pre><code class="language-python">
+word = "Hi"
+print(word * 3)  # HiHiHi
+    </code></pre>
+
+    <h3>🔹 Membership</h3>
+    <pre><code class="language-python">
+text = "Python"
+print("Py" in text)        # True
+print("Java" not in text)  # True
+    </code></pre>
+
+    <hr>
+
+    <h2>4. Common String Functions</h2>
+    <pre><code class="language-python">
+msg = "   Python Programming   "
+
+print(len(msg))         # Length -> 24
+print(msg.upper())      # Uppercase
+print(msg.lower())      # Lowercase
+print(msg.strip())      # Removes extra spaces
+print(msg.replace("Python", "Java"))  # Replace
+print(msg.split())      # Split -> ['Python', 'Programming']
+print(msg.find("Pro"))  # Find substring -> 9
+    </code></pre>
+
+    <hr>
+
+    <h2>5. String Formatting</h2>
+
+    <h3>🔹 Using f-strings</h3>
+    <pre><code class="language-python">
+name = "Alice"
+age = 22
+print(f"My name is {name} and I am {age} years old.")
+    </code></pre>
+
+    <h3>🔹 Using .format()</h3>
+    <pre><code class="language-python">
+print("My name is {} and I am {} years old.".format("Bob", 25))
+    </code></pre>
+
+    <h3>🔹 Old-style % formatting</h3>
+    <pre><code class="language-python">
+print("My name is %s and I am %d years old." % ("Charlie", 30))
+    </code></pre>
+
+    <hr>
+
+    <h2>6. Escape Characters</h2>
+    <pre><code class="language-python">
+print("Hello\nWorld")   # New line
+print("Hello\tWorld")   # Tab space
+print("She said \"Python is fun\"")  # Quotes inside string
+    </code></pre>
+
+    <p><b>Output:</b></p>
+    <pre><code>Hello
+World
+Hello    World
+She said "Python is fun"</code></pre>
+
+    <hr>
+
+    <h2>7. String Iteration (Looping)</h2>
+    <pre><code class="language-python">
+text = "Python"
+for ch in text:
+    print(ch)
+    </code></pre>
+
+    <hr>
+
+    <h2>8. Practice Tasks</h2>
+    <ol>
+      <li>Create a string and print its <b>first, middle, and last characters</b>.</li>
+      <li>Check whether a substring exists inside a string.</li>
+      <li>Take user input for name and print:
+        <ul>
+          <li>Name in uppercase</li>
+          <li>Name in lowercase</li>
+          <li>Length of name</li>
+        </ul>
+      </li>
+      <li>Reverse a string without using slicing.</li>
+      <li>Replace all spaces in a string with <code>-</code>.</li>
+    </ol>
+
+    <hr>
+
+    <h2>📌 Day 5 Summary</h2>
+    <ul>
+      <li>Created strings using quotes.</li>
+      <li>Learned indexing, slicing, concatenation, repetition.</li>
+      <li>Explored common functions and formatting.</li>
+      <li>Worked with escape characters and loops.</li>
+    </ul>
+  </div>
+</article>
+    <!-- Footer -->
+  <footer>
+    <p>© 2025 Z0>A1 Blog</p>
+  </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+
+</body>
+</html>

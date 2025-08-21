@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 9 – Loops (Advanced Concepts)</title>
+ <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css"></head>
+<body>
+
+      <!-- Header -->
+  <header>
+    <h1>Day 10 – Strings in Python (Advanced Concepts)</h1>
+    <nav>
+      <a href="index.html" class="read-more">← Back to Home</a>
+    </nav>
+  </header>
+
+<article>
+  <div class="container">
+    <h1>📘 Day 9 – Loops (Advanced Concepts)</h1>
+
+    <p>Today we’ll explore <b>nested loops, loop control statements,</b> and some practical applications of loops in Python. 🚀</p>
+    <hr>
+
+    <h2>1. Quick Recap of Loops</h2>
+    <p>A <b>loop</b> is used to repeat a block of code multiple times.</p>
+    <ul>
+      <li><b>for loop</b> → used when number of iterations is known.</li>
+      <li><b>while loop</b> → used when repetitions depend on a condition.</li>
+    </ul>
+
+    <pre><code class="language-python">
+for i in range(5):
+    print("Hello", i)
+    </code></pre>
+
+    <pre><code class="language-python">
+count = 0
+while count < 5:
+    print("Count is:", count)
+    count += 1
+    </code></pre>
+
+    <h2>2. Nested Loops</h2>
+    <p>A <b>loop inside another loop</b>. Example: Multiplication table.</p>
+
+    <pre><code class="language-python">
+for i in range(1, 4):   # Outer loop
+    for j in range(1, 4):   # Inner loop
+        print(i, "*", j, "=", i*j)
+    print("----")
+    </code></pre>
+
+    <h3>Output:</h3>
+    <pre><code>
+1 * 1 = 1
+1 * 2 = 2
+1 * 3 = 3
+----
+2 * 1 = 2
+2 * 2 = 4
+2 * 3 = 6
+----
+3 * 1 = 3
+3 * 2 = 6
+3 * 3 = 9
+----
+    </code></pre>
+
+    <h2>3. Loop Control Statements</h2>
+
+    <h3>(a) break – exit the loop immediately</h3>
+    <pre><code class="language-python">
+for i in range(10):
+    if i == 5:
+        break
+    print(i)
+    </code></pre>
+
+    <h3>(b) continue – skip current iteration</h3>
+    <pre><code class="language-python">
+for i in range(10):
+    if i % 2 == 0:
+        continue
+    print(i)
+    </code></pre>
+
+    <h3>(c) pass – does nothing (placeholder)</h3>
+    <pre><code class="language-python">
+for i in range(5):
+    if i == 3:
+        pass   # to be implemented later
+    else:
+        print("Number:", i)
+    </code></pre>
+
+    <h2>4. Using else with Loops</h2>
+    <p>The <code>else</code> block executes only if loop finishes normally (not interrupted by <code>break</code>).</p>
+
+    <pre><code class="language-python">
+for i in range(5):
+    print(i)
+else:
+    print("Loop completed successfully!")
+    </code></pre>
+
+    <pre><code class="language-python">
+for i in range(5):
+    if i == 3:
+        break
+    print(i)
+else:
+    print("This will not run")
+    </code></pre>
+
+    <h2>5. Practical Problems with Loops</h2>
+
+    <h3>🔹 Factorial of a Number</h3>
+    <pre><code class="language-python">
+num = 5
+factorial = 1
+
+for i in range(1, num + 1):
+    factorial *= i
+
+print("Factorial of", num, "is", factorial)
+    </code></pre>
+
+    <h3>🔹 Prime Number Check</h3>
+    <pre><code class="language-python">
+num = 29
+is_prime = True
+
+for i in range(2, num):
+    if num % i == 0:
+        is_prime = False
+        break
+
+if is_prime:
+    print(num, "is a prime number")
+else:
+    print(num, "is not a prime number")
+    </code></pre>
+
+    <h3>🔹 Pattern Printing (Pyramid)</h3>
+    <pre><code class="language-python">
+rows = 5
+for i in range(1, rows+1):
+    print("*" * i)
+    </code></pre>
+
+    <h3>Output:</h3>
+    <pre><code>
+*
+**
+***
+****
+*****
+    </code></pre>
+
+    <p>Inverted pyramid:</p>
+    <pre><code class="language-python">
+rows = 5
+for i in range(rows, 0, -1):
+    print("*" * i)
+    </code></pre>
+
+    <h3>🔹 Guess the Number Game</h3>
+    <pre><code class="language-python">
+secret = 7
+while True:
+    guess = int(input("Enter your guess (1-10): "))
+    if guess == secret:
+        print("Correct! 🎉")
+        break
+    else:
+        print("Wrong guess, try again!")
+    </code></pre>
+
+    <h2>🎯 Practice Tasks</h2>
+    <ul>
+      <li>Write a program to print a multiplication table (1–10).</li>
+      <li>Print the star pattern:
+        <pre><code>
+*
+**
+***
+****
+*****
+        </code></pre>
+      </li>
+      <li>Find all prime numbers between 1 and 50.</li>
+      <li>Write a program that keeps asking for input until the user types <code>"exit"</code>.</li>
+      <li>Write a program to reverse a string using a loop.</li>
+    </ul>
+
+    <hr>
+    <p><b>✅ Day 9 Summary:</b></p>
+    <ul>
+      <li>Understood nested loops.</li>
+      <li>Learned loop control statements (<code>break</code>, <code>continue</code>, <code>pass</code>).</li>
+      <li>Discovered how to use <code>else</code> with loops.</li>
+      <li>Practiced real-world problems like factorial, prime, patterns, and games.</li>
+    </ul>
+  </div>
+</article>
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Z0>A1 Blog</p>
+  </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+</body>
+</html>

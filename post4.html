@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 4 - Control Flow in Python</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Day 4 – Control Flow in Python</h1>
+    <a href="index.html" class="back-link">← Back to Home</a>
+  </header>
+
+  <!-- Article -->
+  <article>
+    <h2>🔹 1. What is Control Flow?</h2>
+    <p>Control flow decides <b>which part of the program runs and when</b>. 
+    Normally, Python runs code top to bottom, but with <b>if/else</b> we make decisions.</p>
+    <p><i>Example: If it rains → take an umbrella. Else → wear sunglasses.</i></p>
+
+    <h2>🔹 2. if Statement</h2>
+    <pre><code>age = 20
+
+if age >= 18:
+    print("You are an adult.")</code></pre>
+
+    <h2>🔹 3. if-else Statement</h2>
+    <pre><code>age = 16
+
+if age >= 18:
+    print("You can vote.")
+else:
+    print("You cannot vote yet.")</code></pre>
+
+    <h2>🔹 4. if-elif-else (Multiple Conditions)</h2>
+    <pre><code>marks = 75
+
+if marks >= 90:
+    print("Grade: A")
+elif marks >= 75:
+    print("Grade: B")
+elif marks >= 50:
+    print("Grade: C")
+else:
+    print("Grade: F")</code></pre>
+
+    <h2>🔹 5. Nested if Statements</h2>
+    <pre><code>age = 20
+citizen = True
+
+if age >= 18:
+    if citizen:
+        print("You can vote in elections.")
+    else:
+        print("You must be a citizen to vote.")
+else:
+    print("You are under 18.")</code></pre>
+
+    <h2>🔹 6. Comparison Operators</h2>
+    <ul>
+      <li><code>==</code> → Equal to</li>
+      <li><code>!=</code> → Not equal to</li>
+      <li><code>&gt;</code> → Greater than</li>
+      <li><code>&lt;</code> → Less than</li>
+      <li><code>&gt;=</code> → Greater or equal</li>
+      <li><code>&lt;=</code> → Less or equal</li>
+    </ul>
+
+    <h2>🔹 7. Logical Operators</h2>
+    <ul>
+      <li><code>and</code> → Both must be True</li>
+      <li><code>or</code> → At least one True</li>
+      <li><code>not</code> → Negates condition</li>
+    </ul>
+    <pre><code>age = 22
+student = True
+
+if age > 18 and student:
+    print("Adult student.")</code></pre>
+
+    <h2>🔹 8. Shorthand if</h2>
+    <pre><code>x = 10
+if x > 5: print("x is greater than 5")</code></pre>
+
+    <h2>🔹 9. Ternary Operator</h2>
+    <pre><code>age = 17
+status = "Adult" if age >= 18 else "Minor"
+print(status)  # Minor</code></pre>
+
+    <h2>🔹 10. Real-Life Examples</h2>
+    <h3>✅ Even or Odd</h3>
+    <pre><code>num = 7
+if num % 2 == 0:
+    print("Even number")
+else:
+    print("Odd number")</code></pre>
+
+    <h3>✅ Login System</h3>
+    <pre><code>username = "admin"
+password = "1234"
+
+if username == "admin" and password == "1234":
+    print("Login Successful!")
+else:
+    print("Invalid credentials")</code></pre>
+
+    <h3>✅ Traffic Signal</h3>
+    <pre><code>signal = "red"
+
+if signal == "green":
+    print("Go")
+elif signal == "yellow":
+    print("Wait")
+else:
+    print("Stop")</code></pre>
+
+    <h2>🔹 11. Practice Tasks</h2>
+    <ol>
+      <li>Check whether a number is positive, negative, or zero.</li>
+      <li>Check driving license eligibility (age ≥ 18).</li>
+      <li>Find the largest of three numbers.</li>
+      <li>Check if a year is a leap year.</li>
+      <li>Password check → "Access Granted" or "Access Denied".</li>
+    </ol>
+  </article>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 CodeCraft Blog</p>
+  </footer>
+
+</body>
+</html>

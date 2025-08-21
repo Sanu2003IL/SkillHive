@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 9 – Strings in Python (Advanced Concepts)</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Day 10 – Strings in Python (Advanced Concepts)</h1>
+    <nav>
+      <a href="index.html" class="read-more">← Back to Home</a>
+    </nav>
+  </header>
+
+  <!-- Article -->
+  <article>
+    <p>This lesson takes your <b>string knowledge</b> to the next level 🚀. We’ll explore advanced operations, formatting, and powerful handling techniques.</p>
+    <hr>
+
+    <h2>1. String Indexing Recap</h2>
+    <pre><code class="language-python">word = "PYTHON"
+print(word[0])   # P
+print(word[5])   # N
+print(word[-1])  # N
+print(word[-6])  # P</code></pre>
+
+    <h2>2. String Slicing Recap</h2>
+    <pre><code class="language-python">s = "Programming"
+
+print(s[0:6])    # Progra
+print(s[:6])     # Progra
+print(s[3:])     # gramming
+print(s[:])      # Programming
+print(s[::2])    # Pormig
+print(s[::-1])   # gnimmargorP</code></pre>
+
+    <h2>3. Advanced String Methods</h2>
+    <h3>Searching</h3>
+    <pre><code class="language-python">text = "Python is powerful and easy to learn."
+
+print(text.find("powerful"))   # 10
+print(text.find("Java"))       # -1
+print(text.index("easy"))      # 22</code></pre>
+
+    <h3>Counting Occurrences</h3>
+    <pre><code class="language-python">msg = "banana banana mango"
+
+print(msg.count("banana"))   # 2
+print(msg.count("a"))        # 6</code></pre>
+
+    <h3>Replacing</h3>
+    <pre><code class="language-python">text = "I like Java"
+print(text.replace("Java", "Python"))</code></pre>
+
+    <h3>Case Transformations</h3>
+    <pre><code class="language-python">word = "python"
+print(word.upper())
+print(word.lower())
+print(word.title())
+print(word.capitalize())
+print("HELLO".casefold())</code></pre>
+
+    <h3>Checking Properties</h3>
+    <pre><code class="language-python">s = "Python3"
+print(s.isalpha())
+print("Python".isalpha())
+print("123".isdigit())
+print("hello".islower())
+print("HELLO".isupper())
+print("Hello World".istitle())</code></pre>
+
+    <h3>Whitespace Handling</h3>
+    <pre><code class="language-python">txt = "   Python   "
+print(txt.strip())
+print(txt.lstrip())
+print(txt.rstrip())</code></pre>
+
+    <h2>4. String Formatting</h2>
+    <pre><code class="language-python"># Old Style
+name = "Alice"
+age = 25
+print("My name is %s and I am %d years old." % (name, age))
+
+# str.format()
+name = "Bob"
+lang = "Python"
+print("Hello, my name is {} and I code in {}.".format(name, lang))
+
+# f-Strings
+name = "Charlie"
+score = 95.5
+print(f"My name is {name} and I scored {score}.")</code></pre>
+
+    <h2>5. Splitting & Joining</h2>
+    <pre><code class="language-python">sentence = "Python is fun to learn"
+
+words = sentence.split()  
+print(words)
+
+joined = "-".join(words)
+print(joined)</code></pre>
+
+    <h2>6. Escape Characters</h2>
+    <pre><code class="language-python">print("Hello\nWorld")
+print("Hello\tWorld")
+print("He said: \"Python is great!\"")
+print("C:\\Users\\Name")</code></pre>
+
+    <h2>7. Raw Strings</h2>
+    <pre><code class="language-python">path = r"C:\Users\Name\Documents"
+print(path)</code></pre>
+
+    <h2>8. Multi-line Strings</h2>
+    <pre><code class="language-python">msg = """This is a
+multi-line string
+in Python."""
+print(msg)</code></pre>
+
+    <h2>9. Practice Problems</h2>
+    <ul>
+      <li>Reverse a string without slicing.</li>
+      <li>Count vowels in a string.</li>
+      <li>Check if a string is palindrome.</li>
+      <li>Replace spaces with <code>-</code>.</li>
+      <li>Display each character with its index.</li>
+    </ul>
+  </article>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Z0>A1 Blog</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+</body>
+</html>
