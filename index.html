@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeCraft Blog</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>⚡ SkillHive</h1>
+    <p>Daily Coding Challenges, Python Tips & Tricks</p>
+  </header>
+
+  <nav>
+    <button onclick="filterPosts('All')">All</button>
+    <button onclick="filterPosts('Python Basics')">Python Basics</button>
+    <button onclick="filterPosts('Tips')">Tips</button>
+    <button onclick="filterPosts('Challenges')">Challenges</button>
+  </nav>
+
+  <main id="post-container"></main>
+
+  <footer>
+    <p>© 2025 SkillHive Blog  ❤️ </p>
+  </footer>
+
+  <script>
+    let allPosts = [];
+
+    async function loadPosts() {
+      try {
+        const response = await fetch('posts.json');
+        const posts = await response.json();
+        allPosts = posts;
+        displayPosts(posts);
+      } catch (error) {
+        console.error("Error loading posts:", error);
+      }
+    }
+
+    function displayPosts(posts) {
+      const container = document.getElementById('post-container');
+      container.innerHTML = '';
+      posts.forEach(post => {
+        const card = document.createElement('div');
+        card.className = 'post-card';
+        card.innerHTML = `
+          <h2><a href="${post.file}">${post.title}</a></h2>
+          <p class="meta">${post.date} • ${post.tag}</p>
+          <p>${post.excerpt}</p>
+          <a href="${post.file}" class="read-more">Read More →</a>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    function filterPosts(tag) {
+      if (tag === 'All') {
+        displayPosts(allPosts);
+      } else {
+        const filtered = allPosts.filter(p => p.tag === tag);
+        displayPosts(filtered);
+      }
+    }
+
+    loadPosts();
+  </script>
+</body>
+</html>

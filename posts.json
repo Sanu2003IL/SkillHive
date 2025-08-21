@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Day 1 - Python Hello World",
+    "file": "post1.html",
+    "date": "2025-08-21",
+    "tag": "Python Basics",
+    "excerpt": "Starting Python journey with the classic Hello World example..."
+  },
+  {
+    "title": "Day 2 - Python Variables",
+    "file": "post2.html",
+    "date": "2025-08-22",
+    "tag": "Python Basics",
+    "excerpt": "Understanding variables in Python and how to store data..."
+  },
+  {
+    "title": "Day 3 - Tip: Use Virtual Environments",
+    "file": "post3.html",
+    "date": "2025-08-23",
+    "tag": "Tips",
+    "excerpt": "Learn why virtual environments are important in Python projects..."
+  }
+]
