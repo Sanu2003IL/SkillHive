@@ -14,26 +14,27 @@
     "excerpt": "Understanding variables in Python and how to store data..."
   },
     {
-    "title": "Day 3 - Python Variables",
+    "title": "Day 3 - Understanding Data Types & Operators",
     "file": "post3.html",
     "date": "2025-08-22",
     "tag": "Python Basics",
-    "excerpt": "Understanding variables in Python and how to store data..."
+    "excerpt": "Explore strings, integers, floats, and booleans. Learn type conversion functions and operators such as arithmetic, comparison, and logical. Practice with a simple calculator and even/odd checker."
   },
        {
-    "title": "Day 4 - Python Variables",
+    "title": "Day 4 - Conditional Statements",
     "file": "post4.html",
     "date": "2025-08-22",
     "tag": "Python Basics",
-    "excerpt": "Understanding variables in Python and how to store data..."
-  },  
+    "excerpt": "Master if, elif, and else statements along with nested conditions and logical operators. Practice with a grading system and a voting eligibility program."
+  },
    {
-    "title": "Day 5 - Python Variables",
+    "title": "Day 5 - Input & String Manipulation",
     "file": "post5.html",
     "date": "2025-08-22",
     "tag": "Python Basics",
-    "excerpt": "Understanding variables in Python and how to store data..."
-  },  
+    "excerpt": "Work with the input() function and string methods like upper(), lower(), replace(), and split(). Learn formatted strings (f-strings). Practice by reversing a string and creating a word counter."
+   },
+
    {
     "title": "Day 6 - Python Variables",
     "file": "post6.html",
